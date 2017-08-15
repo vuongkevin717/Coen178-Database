@@ -1,5 +1,7 @@
 /* Given the machine id or customer-phone or email address, should show a
-machine(s) status. This procedure will only return at most 1 machine */
+machine(s) status. 
+
+statusbyID will only return at most 1 machine */
 
 CREATE OR REPLACE PROCEDURE statusbyID --by machineID
 	(machineID_param IN serviceItem.machineID%type)
@@ -12,7 +14,8 @@ END;
 /
 show errors;
 
-/* This procedure can return as many machines as the customer has. */
+/* statusbyphone can return as many machines as the customer has. */
+
 CREATE OR REPLACE PROCEDURE statusbyphone --by cust_phone
 	(custphone_param IN customer.cust_phone%type)
 AS

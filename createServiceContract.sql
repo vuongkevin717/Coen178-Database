@@ -1,5 +1,5 @@
 /* Create a service contract for a customer. Contains contractID, start/end date
-	must check so see if date is valid */
+	must check to see if date is valid */
 
 CREATE OR REPLACE PROCEDURE createservicecontract
 	(contractID_param IN Contract.contractID%type

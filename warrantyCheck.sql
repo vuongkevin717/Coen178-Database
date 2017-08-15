@@ -1,5 +1,9 @@
 /* This function will check whether or not a warranty is valid and return 
-Y or N which will be inputted into the coverage attribute */
+Y or N which will be inputted into the coverage attribute 
+
+It begins by ensure the contractID entered is valid. Then it checks the datein that
+was entered and compares that to the enddate of the contract and updates the warranty coverage
+accordingly*/
 
 CREATE OR REPLACE FUNCTION warrantycheck
 	(contractID_param IN contract.contractID%type,

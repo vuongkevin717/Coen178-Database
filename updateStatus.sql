@@ -7,6 +7,7 @@ timeout will be the estimated completion date, costofparts is an estimation
 and laborhours is an estimation as well. When this procedure is run
 with a newstatus of 3 or 4, then those estimations will be the finalized exact
 numbers */
+
  CREATE OR REPLACE PROCEDURE updatestatus
  	(repairID_param IN repairMachine.repairID%type,
  	 machineID_param IN repairMachine.machineID%type,
@@ -15,16 +16,8 @@ numbers */
  	 costofparts_param IN repairMachine.costofparts%type,
  	 laborhours_param IN rapairMachine.laborhours%type,
  	 newstatus IN repairMachine.status%type)
- /* DECLARE
- 	temptimeout IN repairMachine.timeout%type;
- 	tempcostofparts IN repairMachine.costofparts%type;
- 	templaborhours IN repairMachine.laborhours%type; */
  AS
  	BEGIN
- /*		SELECT timeout, costofparts, laborhours INTO temptimeout, tempcostofparts, templaborhours
- 		FROM repairMachine
- 		WHERE repairID_param = repairID AND machineID_param = machineID; */
-
  	/* Update the status of the desired machine */
 
  		UPDATE repairMachine

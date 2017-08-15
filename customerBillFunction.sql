@@ -4,10 +4,13 @@ repaired, time (and date) the machine was brought in; time the machine is
 ready and repair information. Repair information includes the name and 
 description of each type of problem that is fixed, charge for each service, 
 names and price of parts used (if any) and the total amount due. If the 
-machine is under warranty, total amount due should be 0 */
+machine is under warranty, total amount due should be 0 
 
---Function that calculates the customers total bill between all their machines
---and returns the value as a numeric
+Function that calculates the customers total bill between all their machines
+and returns the value as a numeric 
+
+The customers bill will be discounted 10% if they have more than 1 machine.
+*/
 
 CREATE OR REPLACE FUNCTION customerbill
 	(custID_param IN customer.custID%type)
@@ -31,7 +34,7 @@ BEGIN
 		amounttemp bill.amount%type;
 		laborhourstemp repairMachine.laborhours%type;
 		costofpartstemp repairMachine.costofpartstemp%type;
-		sumtemp := 0; --syntax????!?!?!?!
+		sumtemp := 0; 
 		amounttemp := 0;
 
 	IF NOT group_cur%ISOPEN THEN
@@ -42,6 +45,10 @@ BEGIN
 	  	OPEN machine_cur;
 	END IF;
 
+/* This loop will obtain the groupID (each customer has a "group" of machines with total number
+   of machines being 1 or greater in that group) and determine the number of machines in each group. The loop
+   is used primarily in the case that a customer has multiple orders and thus has multiple "groups" of machines */
+   
 	LOOP
 		FETCH group_cur INTO group_rec;
 		EXIT WHEN group_cur%NOTFOUND;
@@ -49,6 +56,9 @@ BEGIN
 		SELECT noofmachines INTO numbertemp
 		FROM groupcluster
 		WHERE groupID = group_rec;
+
+/* If the customer has more than 1 machine. This will loop through that customers machines
+   and calculate the cost accordingly with the 10 percent discount.*/
 
 		IF noofmachines > 1 THEN
 			LOOP

@@ -48,7 +48,6 @@ CREATE TABLE repairMachine(repairID varchar(5) NOT NULL,
                            custID varchar(5) NOT NULL,
                            empID varchar(5) NOT NULL,
                            billID varchar(5) NOT NULL,
---------		   partsordered,
                            timein time,
                            timeout time,
                            status char(1),
@@ -57,12 +56,8 @@ CREATE TABLE repairMachine(repairID varchar(5) NOT NULL,
                            FOREIGN KEY (custID) REFERENCES customer(custID),
                            FOREIGN KEY (empID) REFERENCES repairPerson(empID),
                            FOREIGN KEY (billID) REFERENCES bill(billID));
-CREATE TABLE has(
-      repairID varchar(5),
-      machineID varchar(5),
-      problemID varchar(5),
-      PRIMARY KEY (repairID, machineID, problemID)
-);
 
---We should add checks to some of the tables so that the user does not accidently input values that are invalid.
---For example, status can only be values within the set ('1', '2', '3', '4').
+CREATE TABLE has(repairID varchar(5),
+                 machineID varchar(5),
+                 problemID varchar(5),
+                 PRIMARY KEY (repairID, machineID, problemID));
