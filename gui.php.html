@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)http://students.engr.scu.edu/~gchrist/coen178_finalproj/gui/gui.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+  
+  <body>
+   
+    <h1 style="text-align:center">SoPrompt</h1>
+
+
+  <!-- enter information into customerinfo table & print table to page -->
+	<h2>Customer Information</h2> 
+ <table style="border:1px solid black; margin:10px; padding:20px;">
+  <tbody><tr>
+    <td>
+    <form action="http://students.engr.scu.edu/~gchrist/coen178_finalproj/gui/php/entercustomer.php" method="post">
+      <div>
+	Customer ID:<br>
+	<input type="text" id="custid" name="custid" placeholder="Customer ID">
+	<br><br>
+	Name:<br>
+	<input type="text" id="custname" name="custname" placeholder="Name">
+	<br><br>
+	Phone Number:<br>
+	<input type="text" id="custphone" name="custphone" placeholder="2099812181">
+	<br><br>
+	<input type="submit" name="Submit" value="Submit">
+      </div>
+    </form>
+    </td>
+    <td style="padding-left: 50px;">
+      <table border="1"><tbody><tr><th>Customer ID</th><th>Customer Name</th><th>Phone Number</th></tr><tr><td>5</td><td>Kyle Paris</td><td>4444444444</td></tr><tr><td>7</td><td>Joe Smith</td><td>0123456789</td></tr><tr><td>1</td><td>Gabe Christ</td><td>2099812181</td></tr><tr><td>2</td><td>Kevin Vuong</td><td>1231231231</td></tr><tr><td>3</td><td>Wil Morrison</td><td>9876543210</td></tr><tr><td>4</td><td>Jude Sakowski</td><td>1234567890</td></tr><tr><td>/*</td><td>asdfasdf</td><td>*/        </td></tr><tr><td>6</td><td>Joe</td><td>111111111 </td></tr></tbody></table>    </td>
+  </tr>
+  </tbody></table>
+  
+ <br>
+
+    <!--Enter info into contract table and print table to screen -->
+	<h2>Contract Information</h2>
+	<table style="border:1px solid black; margin:10px; padding:20px;">
+      <tbody><tr>
+	<td>
+	<form action="http://students.engr.scu.edu/~gchrist/coen178_finalproj/gui/php/entercontract.php" method="post">
+		<div>
+		Contract ID:<br>
+		<input type="text" id="contid" name="contid" placeholder="Contract ID">
+		<br><br>
+		Start Date:<br>
+		<input type="text" id="sdate" name="sdate" placeholder="11-AUG-2016">
+		<br><br>
+		End Date:<br>
+		<input type="text" id="fdate" name="fdate" placeholder="11-AUG-2016">
+		<br><br>
+		<input type="submit" name="Submit" value="Submit">
+		</div>
+	</form>
+	</td>
+	<td style="padding-left: 50px;">
+	  <table border="1"><tbody><tr><th>Contract ID</th><th>Start Date</th><th>End Date</th></tr><tr><td>5</td><td>23-AUG-14</td><td>24-AUG-17</td></tr><tr><td>3</td><td>15-NOV-13</td><td>16-NOV-15</td></tr><tr><td>4</td><td>20-FEB-15</td><td>21-FEB-17</td></tr><tr><td>6</td><td>12-AUG-15</td><td>13-JAN-18</td></tr><tr><td>1</td><td>11-AUG-15</td><td>12-AUG-17</td></tr><tr><td>2</td><td>08-JAN-14</td><td>10-JAN-16</td></tr></tbody></table>	</td>
+      </tr>
+    </tbody></table>
+
+<br>
+
+    <!--Enter info into groupcluster table and print table to screen -->
+	<h2>Group Information</h2>
+	<table style="border:1px solid black; margin:10px; padding:20px;">
+      <tbody><tr>
+	<td>
+	<form action="http://students.engr.scu.edu/~gchrist/coen178_finalproj/gui/php/entergroup.php" method="post">
+		<div>
+			Group ID:<br>
+			<input type="text" id="groupid" name="groupid" placeholder="Group ID">
+			<br><br>
+			Number of Machines:<br>
+			<input type="text" id="nomachines" name="nomachines" placeholder="# of Machines">
+			<br><br>
+			<input type="submit" name="Submit" value="Submit">
+		</div>
+	</form>
+	</td>
+	<td style="padding-left: 50px;">
+	  <table border="1"><tbody><tr><th>Group ID</th><th># of Machines</th></tr><tr><td>5</td><td>1</td></tr><tr><td>1</td><td>1</td></tr><tr><td>2</td><td>1</td></tr><tr><td>3</td><td>2</td></tr><tr><td>4</td><td>2</td></tr><tr><td>6</td><td>2</td></tr></tbody></table>	</td>
+      </tr>
+    </tbody></table>
+
+<br>
+
+
+  <!--Enter info into serviceItem table and print table to screen -->
+	<h2>Service Item Information</h2>
+	<table style="border:1px solid black; margin:10px; padding:20px;">
+      <tbody><tr>
+	<td>
+	<form action="http://students.engr.scu.edu/~gchrist/coen178_finalproj/gui/php/enterserviceitem.php" method="post">
+		<div>
+			Machine ID:<br>
+			<input type="text" id="machid" name="machid" placeholder="Machine ID">
+			<br><br>
+			Machine Model:<br>
+			<input type="text" id="model" name="model" placeholder="Model">
+			<br><br>
+			Customer ID:<br>
+			<input type="text" id="cid" name="cid" placeholder="Customer ID">
+			<br><br>
+			Contract ID:<br>
+			<input type="text" id="conid" name="conid" placeholder="Contract ID">
+			<br><br>
+			Group ID:<br>
+			<input type="text" id="gid" name="gid" placeholder="Group ID">
+			<br><br>
+			<input type="submit" name="Submit" value="Submit">					
+		</div>
+	</form>	
+	</td>
+	<td style="padding-left: 50px;">
+  	  <table border="1"><tbody><tr><th>Machine ID</th><th>Machine Model</th><th>Customer ID</th><th>Contract ID</th><th>Group ID</th></tr><tr><td>5</td><td>Windows</td><td>5</td><td>5</td><td>5</td></tr><tr><td>1</td><td>Mac</td><td>1</td><td>1</td><td>1</td></tr><tr><td>2</td><td>Windows</td><td>2</td><td>2</td><td>2</td></tr><tr><td>3</td><td>Linux</td><td>3</td><td>3</td><td>3</td></tr><tr><td>4</td><td>Mac</td><td>4</td><td>4</td><td>4</td></tr><tr><td>6</td><td>Linux</td><td>6</td><td>6</td><td>6</td></tr></tbody></table>	</td>
+      </tr>
+    </tbody></table>
+
+<br>
+  
+
+  <!--Enter info into problem table and print table to screen -->
+	<h2>Item Problem</h2>
+	<table style="border:1px solid black; margin:10px; padding:20px;">
+      <tbody><tr>
+	<td>
+	<form action="http://students.engr.scu.edu/~gchrist/coen178_finalproj/gui/php/enterproblem.php" method="post">
+		<div>
+			Problem ID:<br>
+			<input type="text" id="probid" name="probid" placeholder="Problem ID">
+			<br><br>
+			Description:<br>
+			<input tstyle="border:1px solid black; margin:10px; padding:20px;" ype="text" id="desc" name="desc" placeholder="Description">
+			<br><br>
+			<input type="submit" name="Submit" value="Submit">			
+		</div>
+	</form>
+	</td>
+	<td style="padding-left: 50px;">
+ 	  <table border="1"><tbody><tr><th>Problem ID</th><th>Descripton</th></tr><tr><td>0</td><td>Not Yet Determined</td></tr><tr><td>1</td><td>Broken screen</td></tr><tr><td>2</td><td>computer has virus</td></tr><tr><td>3</td><td>Hard Drive does not work</td></tr><tr><td>4</td><td>Broken keyboard</td></tr></tbody></table>	</td>
+      </tr>
+    </tbody></table>
+
+<br>
+
+  <!--Enter info into repairPerson table and print table to screen -->
+	<h2>Repair Person</h2>
+	<table style="border:1px solid black; margin:10px; padding:20px;">
+      <tbody><tr>
+	<td>
+	<form action="http://students.engr.scu.edu/~gchrist/coen178_finalproj/gui/php/enterrepairperson.php" method="post">
+		<div>
+			Employee ID:<br>
+			<input type="text" id="empid" name="empid" placeholder="Employee ID">
+			<br><br>
+			Name:<br>
+			<input type="text" id="empname" name="empname" placeholder="Employer Name">
+			<br><br>
+			Phone Number:<br>
+			<input type="text" id="empphone" name="empphone" placeholder="2099812181">
+			<br><br>
+			<input type="submit" name="Submit" value="Submit">			
+		</div>
+	</form>
+	</td>
+	<td style="padding-left: 50px;">
+ 	  <table border="1"><tbody><tr><th>Employee ID</th><th>Name</th><th>Phone Number</th></tr><tr><td>2</td><td>Bob Dude</td><td>1242124124</td></tr><tr><td>3</td><td>Nico </td><td>6666666666</td></tr><tr><td>4</td><td>Andrew</td><td>8888888888</td></tr><tr><td>5</td><td>Mike</td><td>3333333333</td></tr><tr><td>1</td><td>Joe Smith</td><td>9898989898</td></tr></tbody></table>	</td>
+      </tr>
+    </tbody></table>
+
+<br>
+
+  <!--Enter info into repairMachine table and print table to screen -->
+	<h2>Repair Machine Information</h2>
+	<table style="border:1px solid black; margin:10px; padding:20px;">
+      <tbody><tr>
+	
+	<td style="padding-left:100px">
+ 	  <table border="1"><tbody><tr><th>Repair ID</th><th>Machine ID</th><th>Customer ID</th><th>Employee ID</th><th>Date Entered</th><th>Date Finished</th><th>Time In</th><th>Time Out</th><th>Hours of Labor</th><th>Cost of Parts</th><th>Status</th><th>coverage</th></tr><tr><td>1</td><td>1</td><td>1</td><td>1</td><td>20-SEP-15</td><td>25-SEP-15</td><td>1000</td><td>1500</td><td>5</td><td>100</td><td>4</td><td>Y</td></tr><tr><td>2</td><td>2</td><td>2</td><td>2</td><td>10-AUG-13</td><td>13-AUG-13</td><td>1230</td><td>1600</td><td>5.3</td><td>250</td><td>3</td><td>N</td></tr><tr><td>3</td><td>3</td><td>3</td><td>3</td><td>25-DEC-15</td><td>29-DEC-15</td><td>800</td><td>1200</td><td>4</td><td>50</td><td>4</td><td>N</td></tr><tr><td>4</td><td>4</td><td>4</td><td>4</td><td>15-FEB-15</td><td>17-FEB-15</td><td>1600</td><td>1800</td><td>2</td><td>75</td><td>4</td><td>N</td></tr><tr><td>5</td><td>5</td><td>5</td><td>5</td><td>11-AUG-16</td><td></td><td>1800</td><td></td><td></td><td></td><td>2</td><td>Y</td></tr><tr><td>6</td><td>6</td><td>6</td><td>5</td><td>12-AUG-16</td><td>14-AUG-16</td><td>1000</td><td>1200</td><td>2</td><td>100</td><td>4</td><td>Y</td></tr></tbody></table>	</td>
+      </tr>
+      <tr>
+
+      <td>
+	<h3>Enter Machine for Repair</h3>
+	<form action="http://students.engr.scu.edu/~gchrist/coen178_finalproj/gui/php/enterrepairmachine.php" method="post">
+		<div>
+			Repair ID:<br>
+			<input type="text" id="repid" name="repid" placeholder="Repair ID">
+			<br><br>
+			Machine ID:<br>
+			<input type="text" id="mid" name="mid" placeholder="Machine ID">
+			<br><br>
+			Customer ID:<br>
+			<input type="text" id="cuid" name="cuid" placeholder="Customer ID">
+			<br><br>
+			Employee ID:<br>
+			<input type="text" id="eid" name="eid" placeholder="Employee ID">
+			<br><br>
+			Date Entered:<br>
+			<input type="text" id="edate" name="edate" placeholder="11-AUG-2016">
+			<br><br>
+			Time In:<br>
+			<input type="text" id="timein" name="timein" placeholder="Military Time - 1200">
+			<br><br>
+			Status:<br>
+			<input type="text" id="status" name="status" placeholder="Status">
+			<br><br>
+			Contract:<br>
+			<input type="text" id="cont" name="cont" placeholder="Contract ID">
+			<br><br>
+			<input type="submit" name="Submit" value="Submit">			
+		</div>
+	</form>
+	</td>
+      <td>
+	<!-- Update status of a machine -->
+	<h3>Update Machine Status</h3>
+			<form action="http://students.engr.scu.edu/~gchrist/coen178_finalproj/gui/php/updatemachine.php" method="post">
+			<div>
+			Repair ID:<br>
+			<input type="text" id="repaid" name="repaid" placeholder="Repair ID">
+			<br><br>
+			Machine ID:<br>
+			<input type="text" id="machiid" name="machiid" placeholder="Machine ID">
+			<br><br>
+			Date Finished:<br>
+			<input type="text" id="eedate" name="eedate" placeholder="11-AUG-2016">
+			<br><br>
+			New Status:<br>
+			<input type="text" id="newstatus" name="newstatus" placeholder="Status">
+			<br><br>
+			Time Out:<br>
+			<input type="text" id="timeout" name="timeout" placeholder="Military Time - 1600">
+			<br><br>
+			Hours of Labor:<br>
+			<input type="text" id="labor" name="labor" placeholder="Hours of Labor">
+			<br><br>
+			Cost of Parts:<br>
+			<input type="text" id="cop" name="cop" placeholder="Parts Cost">
+			<br><br>
+			<input type="submit" name="Submit" value="Submit">
+			</div>	
+			</form>	
+      </td></tr>
+    </tbody></table>
+
+
+<br>
+
+  <!--Enter info into has table and print table to screen -->
+	<h2>Has Information</h2>
+	<table style="border:1px solid black; margin:10px; padding:20px;">
+      <tbody><tr>
+	<td>
+	<form action="http://students.engr.scu.edu/~gchrist/coen178_finalproj/gui/php/enterhas.php" method="post">
+		<div>
+			Repair ID:<br>
+			<input type="text" id="reid" name="reid" placeholder="Repair ID">
+			<br><br>
+			Machine ID:<br>
+			<input type="text" id="mid1" name="mid1" placeholder="Machine ID">
+			<br><br>
+			Problem ID:<br>
+			<input type="text" id="pid1" name="pid1" placeholder="Problem ID">
+			<br><br>
+			<input type="submit" name="Submit" value="Submit">			
+		</div>
+	</form>
+	</td>
+	<td style="padding-left: 50px;">
+ 	  <table border="1"><tbody><tr><th>Repair ID</th><th>Machine ID</th><th>Problem ID</th></tr><tr><td>1</td><td>1</td><td>1</td></tr><tr><td>2</td><td>2</td><td>2</td></tr><tr><td>3</td><td>3</td><td>3</td></tr><tr><td>4</td><td>4</td><td>4</td></tr><tr><td>5</td><td>5</td><td>1</td></tr><tr><td>6</td><td>6</td><td>0</td></tr></tbody></table>	</td>
+      </tr>
+    </tbody></table>
+
+<br>
+
+
+  <!-- Show machine's status given a machine ID or customer phone number -->
+	<h2>Find Machine Status</h2>
+	<table style="border:1px solid black; margin:10px; padding:20px;">
+      <tbody><tr>
+	<td>
+	<form action="http://students.engr.scu.edu/~gchrist/coen178_finalproj/gui/gui.php" method="post">
+		<div>
+			Machine ID:<br>
+			<input type="text" id="mmid" name="mmid" placeholder="Machine ID">
+			<br><br>
+			Or,<br>
+			Customer Phone Number:<br>
+			<input type="text" id="cpn" name="cpn" placeholder="2099812181">
+			<br><br>
+			<input type="submit" name="Submit" value="Submit">			
+		</div>
+	</form>
+	</td>
+	<td style="padding-left:25px">
+      	</td>
+      </tr>
+    </tbody></table>
+
+<br>
+
+  <!-- Shows repair jobs with a status of 1 or 2 -->
+	<h2>Repair Jobs with status 1 or 2</h2>
+	<table>
+      <tbody><tr>
+	<td>
+ 	  <table border="1"><tbody><tr><th>Repair ID</th><th>Machine ID</th><th>Customer ID</th><th>Employee ID</th><th>Date Entered</th><th>Date Finished</th><th>Time In</th><th>Time Out</th><th>Hours of Labor</th><th>Cost of Parts</th><th>Status</th><th>coverage</th></tr><tr><td>5</td><td>5</td><td>5</td><td>5</td><td>11-AUG-16</td><td></td><td>1800</td><td></td><td></td><td></td><td>2</td><td>Y</td></tr></tbody></table>	</td>
+      </tr>
+	</tbody></table>
+
+<br>
+
+	<h2>Generate Bill</h2>
+	<table style="border:1px solid black; margin:10px; padding:20px;">
+      <tbody><tr>
+		<td>
+		<form action="http://students.engr.scu.edu/~gchrist/coen178_finalproj/gui/php/generatebill.php" method="post">
+		<div>
+		Bill ID:<br>
+		<input type="text" id="bid" name="bid" placeholder="Bill ID">
+		<br><br>
+		Machine ID:<br>
+		<input type="text" id="maid1" name="maid1" placeholder="Machine ID">
+		<br><br>
+		Customer ID:<br>
+		<input type="text" id="cuid1" name="cuid1" placeholder="Customer ID">
+		<br><br>
+		<input type="submit" name="Submit" value="Generate Bill">
+		</div>
+		</form>
+		</td>
+		<td style="padding-left: 50px;">
+      <table border="1"><tbody><tr><th>Bill ID</th><th>Repair ID</th><th>Machine ID</th><th>Bill Price</th></tr><tr><td>6</td><td>6</td><td>6</td><td>0</td></tr><tr><td>5</td><td>5</td><td>5</td><td>0</td></tr><tr><td>3</td><td>3</td><td>3</td><td>180</td></tr><tr><td>1</td><td>1</td><td>1</td><td>0</td></tr><tr><td>2</td><td>2</td><td>2</td><td>433</td></tr><tr><td>4</td><td>4</td><td>4</td><td>158</td></tr></tbody></table>    </td>
+
+	</tr>
+	</tbody></table>
+
+  
+
+</body></html>
